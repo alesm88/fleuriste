@@ -1,0 +1,27 @@
+header {
+    padding: 30px;
+    text-align: center;
+    background: #99BC85;
+    color: black;
+    font-size: 30px;
+}
+
+nav {
+    padding: 5px;
+    text-align: left;
+    background: #E4EFE7;
+    color: black;
+    font-size: 20px;
+}
+
+section {
+    background: #E4EFE7;
+}
+
+footer {
+    padding: 60px;
+    background: #99BC85;
+    color: black;
+    font-size: 30px;
+}
+/*background: #E4EFE7;*/
