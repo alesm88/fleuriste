@@ -1,9 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "section section section"
+    "footer footer footer";
+}
+
 header {
     padding: 30px;
     text-align: center;
     background: #99BC85;
     color: black;
     font-size: 30px;
+    grid-area: header;
 }
 
 nav {
@@ -12,10 +27,88 @@ nav {
     background: #E4EFE7;
     color: black;
     font-size: 20px;
+    grid-area: nav;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: red;
+    font-weight: bold;
+}
+
+main{
+    margin: 10px;
+    padding: 10px;
+    background-color: aquamarine;
+    grid-area: main;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "livraipaie livraipaie"
+    "savfairetarif savfairetarif";
+}
+
+.decouverte{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.nouveaute{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.bouton{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 10px;
+}
+
+.livraisonpaiement{
+    grid-area: livraipaie;
+    display: flex;
+    justify-content: space-around;
+}
+
+.savoirfairetarif{
+    grid-area: savfairetarif;
+    display: flex;
+    justify-content: space-around;
 }
 
 section {
     background: #E4EFE7;
+    padding: 20px;
+    grid-area: section;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "texte texte"
+    "pastexte pastexte";
+}
+.texte{
+    grid-area: texte;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pastexte{
+    grid-area: pastexte;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
@@ -23,5 +116,36 @@ footer {
     background: #99BC85;
     color: black;
     font-size: 30px;
+    grid-area: footer;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "un un un"
+    "deux deux"
+    "trois trois"
+    "quatre quatre";
 }
-/*background: #E4EFE7;*/
+
+.premier{
+    grid-area: un;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deuxieme{
+    grid-area: deux;
+    display: flex;
+    justify-content: space-between;
+}
+
+.troisieme{
+    grid-area: trois;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quatrieme{
+    grid-area: quatre;
+    display: flex;
+    justify-content: space-between;
+}
