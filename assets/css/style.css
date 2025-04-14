@@ -3,7 +3,6 @@ body{
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
     grid-template-areas:
     "header header header"
     "nav nav nav"
@@ -21,8 +20,28 @@ header {
     grid-area: header;
 }
 
+header > h1{
+    color: darkred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.extrabar{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px 50px; /* Donner priorité d'espace au champs de saisie */
+    column-gap: 20px;
+}
+
+#userIcon, #shopBag{
+    justify-self: end; /* Aligner verticalement mes DEUX DERNIERS ITEMS de GRID à DROITE */
+}
+
+.extrabar #barrederecherche{
+    border-radius: 25px;
+    border-style: none;
+}
+
 nav {
-    padding: 5px;
+    padding: 15px;
     text-align: left;
     background: #E4EFE7;
     color: black;
@@ -64,6 +83,10 @@ main{
     gap: 10px;
 }
 
+.categories > img{
+    border-radius: 50%;
+}
+
 .nouveaute{
     display: flex;
     justify-content: space-evenly;
@@ -93,59 +116,45 @@ section {
     background: #E4EFE7;
     padding: 20px;
     grid-area: section;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "texte texte"
-    "pastexte pastexte";
-}
-.texte{
-    grid-area: texte;
-    display: flex;
-    justify-content: space-between;
+    justify-items: center; /* Centre de facon vertical mes ITEMS de mes COLONNES */
 }
 
-.pastexte{
-    grid-area: pastexte;
+section ul{
+    list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+section ul:nth-child(1){
+    align-items: flex-start; /* Comme FLEX-DIRECTION est COLUMN, il faut utiliser align-items pour ALIGNES MES ITEMS DE MON FLEXBOX de façon HORIZONTAL A GAUCHE */
+}
+
+section ul:nth-child(2){
+    align-items: flex-end; /* Comme FLEX-DIRECTION est COLUMN, il faut utiliser align-items pour ALIGNES MES ITEMS DE MON FLEXBOX de façon HORIZONTAL A DROITE */
+}
+
+#champMail{
+    border-radius: 25px;
 }
 
 footer {
-    padding: 60px;
+    padding: 30px; /* Je le donne un petit espace interne pour separer le GRID de FOOTER */
     background: #99BC85;
     color: black;
-    font-size: 30px;
     grid-area: footer;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-    "un un un"
-    "deux deux"
-    "trois trois"
-    "quatre quatre";
+    column-gap: 20px; /* Je le donne un espace entre les colonnes */
+    justify-items: center; /* Centre de facon vertical mes ITEMS de mes COLONNES */
+    
 }
 
-.premier{
-    grid-area: un;
+footer ul{
+    list-style: none; /* Enleve les points aux "li" */
     display: flex;
-    justify-content: space-between;
-}
-
-.deuxieme{
-    grid-area: deux;
-    display: flex;
-    justify-content: space-between;
-}
-
-.troisieme{
-    grid-area: trois;
-    display: flex;
-    justify-content: space-between;
-}
-
-.quatrieme{
-    grid-area: quatre;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Je veux que l'axe principal soi le vertical */
+    row-gap: 20px; /* Pour le donner l'espace entre les items de mon flex (c'est le "li") */
 }

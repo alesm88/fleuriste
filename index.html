@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/hibiscus64pixels.png" type="image/x-icon">
     <title>Les fleurs de l'été</title>
 </head>
 <body>
     <header>
         <h1>Les fleurs de l'été</h1>
+        <div class="extrabar">
+            <img src="assets/img/burgermenu64pixels.png" width="32px" alt="burger menu" title="Burger menu">
+            <input type="search" name="searchbar" placeholder="Hinted search text" id="barrederecherche">
+            <img src="assets/img/user64pixels.png" width="32px" alt="utilisateur" title="Utilisateur" id="userIcon">
+            <img src="assets/img/shoppingbag64pixels.png" width="32px" alt="shopping bag" title="Shopping Bag" id="shopBag">
+        </div>
     </header>
     <nav>
         <a href="index.html">Accueil</a> > 
@@ -16,6 +23,7 @@
         <a href="produit.html">Produit</a> > 
         <a href="contact.html">Contact</a>
     </nav>
+    
     <main>
         <h2>Découverte</h2>
         <div class="decouverte">
@@ -54,43 +62,41 @@
     </main>
 
     <section>
-        <div class="texte">
-            <p>Suivez-nous</p>
-            <p>S'inscrire a la newsletter</p>
-        </div>
-        <div class="pastexte">
-            <p>
+        <ul>
+            <li>Suivez-nous</li>
+            <li>
                 <img src="assets/img/facebook_icon.png" width="24px" alt="facebook_icon" title="Facebook">
                 <img src="assets/img/pinterest_icon.png" width="24px" alt="pinterest_icon" title="Pinterest">
                 <img src="assets/img/linkedin_icon.png" width="24px" alt="linkedin_icon" title="Linkedin">
-            </p>
-            <p>
-                <input type="text" placeholder="Mail">
-            </p>
-        </div>
+            </li>
+        </ul>
+        <ul>
+            <li>S'inscrire a la newsletter</li>
+            <li><input type="text" placeholder="Mail" id="champMail"></li>
+        </ul>
     </section>
 
     <footer>
-        <div class="premier">
-            <p>Contact</p>
-            <p>Mentions légales</p>
-            <p>Avis clients vérifiés</p>
-        </div>
-        <div class="deuxieme">
-            <p>Service Client</p>
-            <p>Conditions GV</p>
-            <p></p>
-        </div>
-        <div class="troisieme">
-            <p>Sites partenaires</p>
-            <p>RGPD</p>
-            <p></p>
-        </div>
-        <div class="quatrieme">
-            <p>Suivez-nous</p>
-            <p>Plan du site</p>
-            <p></p>
-        </div>
+        <ul>
+            <li>Contact</li>
+            <li>Service Client</li>
+            <li>Sites partenaires</li>
+            <li>Suivez-nous</li>
+        </ul>
+        <ul>
+            <li>Mentions légales</li>
+            <li>Conditions GV</li>
+            <li>RGPD</li>
+            <li>Plan du site</li>
+        </ul>
+        <ul>
+            <li>Avis clients vérifiés</li>
+            <li>
+                <img src="assets/img/starwhite64pixels.png" width="32px" alt="etoileblanche">
+                <img src="assets/img/starwhite64pixels.png" width="32px" alt="etoileblanche">
+                <img src="assets/img/starwhite64pixels.png" width="32px" alt="etoileblanche">
+            </li>
+        </ul>      
     </footer>
 </body>
 </html>
