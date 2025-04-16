@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/img/hibiscus64pixels.png" type="image/x-icon">
-    <title>Les fleurs de l'été</title>
+    <title>&#x1F338;&#x1F33A;&#x1F339; Les fleurs de l'été &#x1F490;&#x1F4AE;&#x1F337;</title>
 </head>
 <body>
     <header>
@@ -18,10 +18,7 @@
         </div>
     </header>
     <nav>
-        <a href="index.html">Accueil</a> > 
-        <a href="categories.html">Catégories</a> > 
-        <a href="produit.html">Produit</a> > 
-        <a href="contact.html">Contact</a>
+        <a href="#">Accueil</a>
     </nav>
     
     <main>
@@ -34,9 +31,9 @@
 
         <h2>Catégories</h2>
         <div class="categories">
-            <img src="assets/img/fleur4.png" alt="fleur4" title="Fleur 4">
-            <img src="assets/img/fleur5.png" alt="fleur5" title="Fleur 5">
-            <img src="assets/img/fleur6.png" alt="fleur6" title="Fleur 6">
+            <a href="categories.html"><img src="assets/img/fleur4.png" alt="fleur4" title="Fleur 4"></a>
+            <a href="categories.html"><img src="assets/img/fleur5.png" alt="fleur5" title="Fleur 5"></a>
+            <a href="categories.html"><img src="assets/img/fleur6.png" alt="fleur6" title="Fleur 6"></a>
         </div>
 
         <h2>Nouveauté</h2>
@@ -47,18 +44,24 @@
         </div>
         
         <div class="bouton">
-            <input type="button" style="color: E4EFE7; align-self: center" name="contact" value="Contactez-nous !">
+            <a href="contact.html" class="linkBtn" target="_self" >Contactez-nous !</a>
         </div>
-        
-        <div class="livraisonpaiement">
-            <p>Livraison rapide</p>
-            <p>Paiement sécurisé</p>
+
+        <div class="paieLivrai">
+            <ul>
+                <li><img src="assets/img/delivery-64pixels.png" width="48px" alt="Camion" title="Livraison"></li>
+                <li>Livraison rapide</li>
+                <li><img src="assets/img/eiffel-tower-64pixels.png" width="48px" alt="Eiffel" title="Tour Eiffel"></li>
+                <li>Savoir-faire français</li>
+            </ul>
+            <ul> 
+                <li><img src="assets/img/credit-card-64pixels.png" width="48px" alt="Eiffel" title="Tour Eiffel"></li>  
+                <li>Paiement sécurisé</li>
+                <li><img src="assets/img/euro-sign-64pixems.png" width="48px" alt="Euro" title="Euro"></li>
+                <li>Tarifs préférentiels</li>
+            </ul>
         </div>
-        <div class="savoirfairetarif">   
-            <p>Savoir-faire français</p>
-            <p>Tarifs préférentiels</p>
-        </div>
-        
+
     </main>
 
     <section>
@@ -98,5 +101,6 @@
             </li>
         </ul>      
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

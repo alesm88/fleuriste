@@ -54,62 +54,81 @@ nav a{
 }
 
 nav a:hover{
-    color: red;
+    color: darkgreen;
     font-weight: bold;
 }
 
 main{
     margin: 10px;
     padding: 10px;
-    background-color: aquamarine;
+    background-color: lightskyblue;
     grid-area: main;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "livraipaie livraipaie"
-    "savfairetarif savfairetarif";
 }
 
 .decouverte{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .categories{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-.categories > img{
+.categories a img{
     border-radius: 50%;
 }
 
 .nouveaute{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .bouton{
     display: flex;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 40px;
+    padding: 40px;
+}
+
+.linkBtn{
+    text-decoration: none;
+    background-color: #E4EFE7;
+    color: black;
     padding: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
 }
 
-.livraisonpaiement{
-    grid-area: livraipaie;
-    display: flex;
-    justify-content: space-around;
+.linkBtn:hover{
+    box-shadow: 5px 5px 1px 1px lightgreen;
+    background-color: darkgreen;
+    color: #E4EFE7;
 }
 
-.savoirfairetarif{
-    grid-area: savfairetarif;
+.paieLivrai{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.paieLivrai ul{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.paieLivrai ul li:nth-child(2){
+    margin-bottom: 50px;
 }
 
 section {
@@ -121,8 +140,11 @@ section {
     justify-items: center; /* Centre de facon vertical mes ITEMS de mes COLONNES */
 }
 
+ul{
+    list-style: none; /* Enleve les points aux "li" */
+}
+
 section ul{
-    list-style: none;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -153,8 +175,31 @@ footer {
 }
 
 footer ul{
-    list-style: none; /* Enleve les points aux "li" */
     display: flex;
     flex-direction: column; /* Je veux que l'axe principal soi le vertical */
     row-gap: 20px; /* Pour le donner l'espace entre les items de mon flex (c'est le "li") */
+}
+
+#mesFleurs{
+    background-color: aquamarine;
+    display: grid;
+    margin: 2%;
+    padding: 2%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+    justify-items: center;
+}
+
+.category1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* TRES IMPORTANT : justify-content marchera ne fonctionnera jamais car les colonnes prendre TOUT la place (1fr). https://github.com/tailwindlabs/tailwindcss/discussions/4441 */
+    gap: 20px;
+    justify-items: center;
+    
+}
+
+.category1 a img{ /* pour faire les images résponsives et éviter de se agrandir au-dessous (max-width: 100%) de sa taille */
+    max-width: 100%;
+    height: auto;
 }
