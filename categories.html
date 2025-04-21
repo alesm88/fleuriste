@@ -23,23 +23,30 @@
 
     <main>
         <h2>Catégorie 1</h2>
-        <div class="category1">
+        <!-- <div class="category1">
             <a href="produit.html"><img src="assets/img/fleur1.png" alt="fleur1" title="Fleur 1"></a>
             <a href="produit.html"><img src="assets/img/fleur2.png" alt="fleur2" title="Fleur 2"></a>
             <a href="produit.html"><img src="assets/img/fleur3.png" alt="fleur3" title="Fleur 3"></a>
                 
-            <a href="produit.html"><img src="assets/img/fleur4.png" alt="fleur4" title="Fleur 4"></a>
-            <a href="produit.html"><img src="assets/img/fleur5.png" alt="fleur5" title="Fleur 5"></a>
-            <a href="produit.html"><img src="assets/img/fleur6.png" alt="fleur6" title="Fleur 6"></a>
+            <a href="produit.html"><img src="assets/img/fleur4.png" alt="fleur4" title="Fleur 4" class="ronde"></a>
+            <a href="produit.html"><img src="assets/img/fleur5.png" alt="fleur5" title="Fleur 5" class="ronde"></a>
+            <a href="produit.html"><img src="assets/img/fleur6.png" alt="fleur6" title="Fleur 6" class="ronde"></a>
                
             <a href="produit.html"><img src="assets/img/fleur7.png" alt="fleur7" title="Fleur 7"></a>
             <a href="produit.html"><img src="assets/img/fleur8.png" alt="fleur8" title="Fleur 8"></a>
             <a href="produit.html"><img src="assets/img/fleur9.png" alt="fleur9" title="Fleur 9"></a>
+        </div> -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;" class="filtrer">
+            <input type="text" placeholder="Choisir un couleur" id="couleur">
+            <button onclick="filtrerCouleur()" id="boutonCouleur">Filtrer</button>
         </div>
         
-        <div id="mesFleurs">
+        <div class="fleur-grid" id="fleur-container">
 
+            
         </div>
+        
+        <div id="mesFleurs"></div>
 
         <div class="paieLivrai">
             <ul>
@@ -51,7 +58,7 @@
             <ul> 
                 <li><img src="assets/img/credit-card-64pixels.png" width="48px" alt="Eiffel" title="Tour Eiffel"></li>  
                 <li>Paiement sécurisé</li>
-                <li><img src="assets/img/euro-sign-64pixems.png" width="48px" alt="Euro" title="Euro"></li>
+                <li><img src="assets/img/euro-sign-64pixels.png" width="48px" alt="Euro" title="Euro"></li>
                 <li>Tarifs préférentiels</li>
             </ul>
         </div>
@@ -95,6 +102,7 @@
             </li>
         </ul>      
     </footer>
+    <script src="assets/js/fleurs.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

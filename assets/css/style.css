@@ -106,6 +106,7 @@ main{
     font-size: 20px;
     border-style: solid;
     border-width: 1px;
+    transition-duration: 0.6s;
 }
 
 .linkBtn:hover{
@@ -202,4 +203,143 @@ footer ul{
 .category1 a img{ /* pour faire les images résponsives et éviter de se agrandir au-dessous (max-width: 100%) de sa taille */
     max-width: 100%;
     height: auto;
+}
+
+.ronde{
+    border-radius: 50%;
+}
+
+/* TP Vendredi 18/04/25 - Génerateur Dynalique d'éléments */
+.fleur-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+.fleur-grid .carte{
+    border: 1px black solid;
+    border-radius: 12px;
+    margin: 3px;
+    justify-items: center;
+    background-color: #E4EFE7;
+}
+
+.fleur-grid .carte img{
+    width: 100%;
+}
+
+/* Fin TP Vendredi 18/04/25 - Génerateur Dynalique d'éléments */
+
+article{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "photo side"
+    "photo side"
+    "photo side"
+    "similaire side";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+}
+
+.mainPhoto{
+    grid-area: photo;
+    place-self: center;
+    background-color: yellow;
+}
+
+.mainPhoto img{
+    max-width: 100%;
+    height: auto;
+}
+
+aside{
+    grid-area: side;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+}
+
+aside h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin: 20px 0px;
+}
+
+.prix{
+    font-size: 25px;
+    margin: 20px 0px;
+}
+
+#boutonAchat{
+    background-color: #E4EFE7;
+    border-width: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 25px;
+    padding: 15px;
+}
+
+.imagesPaie{
+    align-self: center;
+}
+
+.imagesPaie img{
+    max-width: 100%;
+    height: auto;
+}
+
+.similareArticles{
+    grid-area: similaire;
+    background-color: lightcoral;
+    place-self: center;
+}
+
+.similareArticles p{
+    font-size: 25px;
+    margin: 15px 0px;
+}
+
+.photosSimilare {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Je fais cette grid pour avoir la taille des images responsive, ça marche pas avec flexbox */
+    gap: 5px;
+}
+
+.photosSimilare img{
+    max-width: 100%;
+    height: auto;
+}
+
+main h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+form{
+    margin: 2% 10% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form label{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form input{
+    border-radius: 10px;
+    border-width: 0;
+    background-color: #E4EFE7;
+    padding: 5px;
+    margin: 0 0 2%;
+}
+
+form #envoi{
+    margin: 0px 35% 5%;
 }

@@ -1,4 +1,81 @@
-let fleurs = [
+// Nous allons ciblier le conteneur de la recette
+let container = document.getElementById(`fleur-container`);
+
+let counter = 0;
+
+// Boucle pour injecter les recettes dans le container
+
+
+
+function filtrerCouleur() {
+    const couleur = document.getElementById("couleur").value;
+    fleurs.forEach(fleur => {
+        if (couleur === "") {
+            counter ++;
+            const carte = document.createElement(`div`);
+            carte.classList.add(`carte`);
+            carte.innerHTML = `<h2>${fleur.nom}</h2>
+            <h4>${fleur.color ? fleur.color : "Multicouleur"}</h4>
+            <a href="${fleur.lien}"><img src="${fleur.image}" alt="${fleur.nom}" title="${fleur.nom}" ${counter>3 && counter<7 ? " class=\"ronde\"" : ""}/></a>
+            <p>${fleur.description.slice(0, 40)}...</p>`;
+            container.appendChild(carte);
+        } else if (couleur === fleur.color) {
+            counter ++;
+            const carte = document.createElement(`div`);
+            carte.classList.add(`carte`);
+            carte.innerHTML = `<h2>${fleur.nom}</h2>
+            <h4>${fleur.color ? fleur.color : "Multicouleur"}</h4>
+            <a href="${fleur.lien}"><img src="${fleur.image}" alt="${fleur.nom}" title="${fleur.nom}" ${counter>3 && counter<7 ? " class=\"ronde\"" : ""}/></a>
+            <p>${fleur.description.slice(0, 40)}...</p>`;
+            container.appendChild(carte);
+        }
+        
+    });
+    const inputCouleur = document.getElementById("couleur");
+    const boutonColor = document.getElementById("boutonCouleur");
+    inputCouleur.disabled = true;
+    boutonColor.disabled = true;
+    
+}
+
+// fleurs.forEach(fleur => {
+//     counter ++;
+//     const carte = document.createElement(`div`);
+//     carte.classList.add(`carte`); // classList.add est pour creer une class et on le donne un nom
+//     carte.innerHTML = `<h2>${fleur.nom}</h2>
+//     <h4>${fleur.color ? fleur.color : "Multicouleur"}</h4>
+//     <a href="${fleur.lien}"><img src="${fleur.image}" alt="${fleur.nom}" title="${fleur.nom}" ${counter>3 && counter<7 ? " class=\"ronde\"" : ""}/></a>
+//     <p>${fleur.description.slice(0, 40)}...</p>`;
+//     container.appendChild(carte); // slice(0, 40) sert a met ... quand le texte est trop long (ex : 40 caractères)
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let fleurs2 = [
     {
         nom: `Rose rouge`,
         couleur: `Rouge`,
@@ -40,7 +117,7 @@ let divMesFleurs = document.querySelector("#mesFleurs");
 
 let paragrFleur = document.createElement(`p`);
 
-fleurs.forEach(element => {
+fleurs2.forEach(element => {
     
     let paragrFleur = document.createElement(`p`);
 
@@ -49,5 +126,3 @@ fleurs.forEach(element => {
 
     divMesFleurs.appendChild(paragrFleur);
 });
-
-
