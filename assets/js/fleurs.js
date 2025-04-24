@@ -70,5 +70,13 @@ const fleurs = [
         color: `Blanche`,
         image: `assets/img/fleur9.png`,
         lien: `produit.html`
+      },
+      {
+        id: 10,
+        nom: `Muguet`,
+        description: `C'est une plante herbacée vivace des régions tempérées dont les fleurs printanières, petites et blanches, forment des grappes de clochettes très odorantes.`,
+        color: `Blanche`,
+        image: `assets/img/fleur10.png`,
+        lien: `produit.html`
       }
 ]

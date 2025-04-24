@@ -27,12 +27,14 @@ header > h1{
 
 .extrabar{
     display: grid;
-    grid-template-columns: 50px 1fr 50px 50px; /* Donner priorité d'espace au champs de saisie */
+    /* Donner priorité d'espace au champs de saisie */
+    grid-template-columns: 50px 1fr 50px 50px; 
     column-gap: 20px;
 }
 
 #userIcon, #shopBag{
-    justify-self: end; /* Aligner verticalement mes DEUX DERNIERS ITEMS de GRID à DROITE */
+    /* Aligner verticalement mes DEUX DERNIERS ITEMS de GRID à DROITE */
+    justify-self: end;
 }
 
 .extrabar #barrederecherche{
@@ -61,7 +63,7 @@ nav a:hover{
 main{
     margin: 10px;
     padding: 10px;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
     grid-area: main;
 }
 
@@ -194,7 +196,7 @@ footer ul{
 
 .category1{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* TRES IMPORTANT : justify-content marchera ne fonctionnera jamais car les colonnes prendre TOUT la place (1fr). https://github.com/tailwindlabs/tailwindcss/discussions/4441 */
+    grid-template-columns: 1fr 1fr 1fr; /* TRES IMPORTANT : justify-content ne fonctionnera jamais car les colonnes prendre TOUT la place (1fr). https://github.com/tailwindlabs/tailwindcss/discussions/4441 */
     gap: 20px;
     justify-items: center;
     
@@ -212,7 +214,7 @@ footer ul{
 /* TP Vendredi 18/04/25 - Génerateur Dynalique d'éléments */
 .fleur-grid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     row-gap: 30px;
     justify-content: center;
 }
@@ -231,6 +233,28 @@ footer ul{
 
 /* Fin TP Vendredi 18/04/25 - Génerateur Dynalique d'éléments */
 
+/* Challenge 22/04/25 */
+
+#feteTravail {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+#feteTravail .trabajo{
+    border: 1px black solid;
+    border-radius: 12px;
+    margin: 3px;
+    justify-items: center;
+    background-color: #E4EFE7;
+}
+
+#feteTravail .trabajo img{
+    width: 100%;
+}
+
+/* Fin Challenge 22/04/25 */
+
 article{
     display: grid;
     gap: 10px;
@@ -247,7 +271,7 @@ article{
 .mainPhoto{
     grid-area: photo;
     place-self: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .mainPhoto img{
@@ -257,7 +281,7 @@ article{
 
 aside{
     grid-area: side;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -295,7 +319,7 @@ aside h3{
 
 .similareArticles{
     grid-area: similaire;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     place-self: center;
 }
 
@@ -315,7 +339,7 @@ aside h3{
     height: auto;
 }
 
-main h2 {
+#titreContactezNous {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
